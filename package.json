@@ -133,7 +133,9 @@
   },
   "pwa-studio": {
     "targets": {
-         "intercept": "src/targets/local-intercept"
+         "intercept": "./local-intercept.js" 
     }
   }
+ 
+  
 }
