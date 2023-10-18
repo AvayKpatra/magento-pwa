@@ -5,17 +5,29 @@ import { Link } from 'react-router-dom';
 import { shape, string } from 'prop-types';
 import { useFooter } from '@magento/peregrine/lib/talons/Footer/useFooter';
 
-import Logo from '../Logo';
-import Newsletter from '../Newsletter';
-import { useStyle } from '../../classify';
+// import Logo from '../Logo';
+import Logo from '@magento/venia-ui/lib/components/Logo';
+// import Newsletter from '../Newsletter';
+import Newsletter from '@magento/venia-ui/lib/components/Newsletter';
+// import { useStyle } from '../../classify';
+
+
+import {mergeClasses,  useStyle} from "@magento/venia-ui/lib/classify"
+
 // import defaultClasses from './footer.module.css';
-import { DEFAULT_LINKS, LOREM_IPSUM } from './sampleData';
+// import { DEFAULT_LINKS, LOREM_IPSUM } from './sampleData';
 import resourceUrl from '@magento/peregrine/lib/util/makeUrl';
 
+
 // import { mergeClasses } from '@magento/venia-ui/lib/classify';
- import defaultClasses from '@magento/venia-ui/lib/components/Footer/footer.css';
- import { DEFAULT_LINKS, LOREM_IPSUM } from "@magento/venia-ui/lib/components/Footer/sampleData";
+//  import defaultClasses from '../../node_modules/@magento/venia-ui/lib/components/Footer/footer.module.css';
+
+import defaultClasses from "@magento/venia-ui/lib/components/Footer/footer.module.css"
+
+import {DEFAULT_LINKS, LOREM_IPSUM } from "@magento/venia-ui/lib/components/Footer/sampleData"
+import { from } from 'form-data';
 //  import GET_STORE_CONFIG_DATA from '@magento/venia-ui/lib/queries/getStoreConfigData.graphql';
+
 
 const Footer = props => {
     const { links } = props;
@@ -64,18 +76,15 @@ const Footer = props => {
         <footer data-cy="Footer-root" className={classes.root}>
             <div className={classes.links}>
 
-{/* Editing footer with added extra link */}
+
 
 <div className={classes.link}>
          <Link to="/foo">
-           <span className={classes.label}>Foo Demo Page</span>
+           <span className={classes.label}> Demo Page</span>
          </Link>
        </div>
 
-{/* EDit end */}
-
-
-                {linkGroups}
+              {linkGroups}
                 <div className={classes.callout}>
                     <span
                         data-cy="Footer-calloutHeading"
@@ -90,15 +99,17 @@ const Footer = props => {
                         data-cy="Footer-calloutText"
                         className={classes.calloutBody}
                     >
-                        <FormattedMessage
+                        {/* <FormattedMessage
                             id={'footer.calloutText'}
                             defaultMessage={LOREM_IPSUM}
-                        />
+                        /> */}
+                        Below link provided you can follow our company for update new Offers and Products
                     </p>
                     <ul className={classes.socialLinks}>
                         <li>
                             <Instagram size={20} />
                         </li>
+                        
                         <li>
                             <Facebook size={20} />
                         </li>

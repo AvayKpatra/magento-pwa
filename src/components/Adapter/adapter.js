@@ -7,11 +7,6 @@ import { useAdapter } from '@magento/peregrine/lib/talons/Adapter/useAdapter';
 import App, { AppContextProvider } from '@magento/venia-ui/lib/components/App';
 import StoreCodeRoute from '@magento/venia-ui/lib/components/StoreCodeRoute';
 
-// Adding import
-
-import { AppContextProvider } from '@magento/venia-ui/lib/components/App';
- import App from '../App';
-
 const Adapter = props => {
     const talonProps = useAdapter(props);
     const {

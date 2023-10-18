@@ -29,8 +29,17 @@
 //   }
 
 
+const moduleOverridePlugin = require('./src/plugins/moduleOverrideWebpackPlugin');
+const componentOverrideMapping = require('./componentOverrideMapping');
 
-function localIntercept() {}
-
-
+function localIntercept(targets) {
+targets.of('@magento/pwa-buildpack').webpackCompiler.tap(compiler => {
+new moduleOverridePlugin(componentOverrideMapping).apply(compiler);
+})
+}
 module.exports = localIntercept;
+
+
+
+
+// cp node_modules/@magento/venia-ui/lib/components/MegaMenu/megaMenuItem.module.css src/components/MegaMenu

@@ -4,6 +4,8 @@ module.exports = (targets) => {
         name: "MFooter",
         pattern: "/footer/:who?",
         path: require.resolve("../components/Footer/footer.js"),
+        path: require.resolve("../components/MegaMenu/megaMenuItem.js"),
+
       });
       return routes;
     });

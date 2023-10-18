@@ -9,9 +9,9 @@ import defaultClasses from './main.module.css';
 
 // Adding import
 
-import { mergeClasses } from '@magento/venia-ui/lib/classify';
-import Header from '@magento/venia-ui/lib/components/Header';
-import defaultClasses from '@magento/venia-ui/lib/components/Main/main.css';
+// // import { mergeClasses } from '@magento/venia-ui/lib/classify';
+// import Header from '@magento/venia-ui/lib/components/Header';
+// import defaultClasses from '@magento/venia-ui/lib/components/Main/main.css';
 
 
 

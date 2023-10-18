@@ -19,7 +19,7 @@ import Icon from '../Icon';
 
  import { HeadProvider, Title } from '@magento/venia-ui/lib/components/Head';
   import Mask from '@magento/venia-ui/lib/components/Mask';
-  import MiniCart from '@magento/venia-ui/lib/components/MiniCart';
+//   import MiniCart from '@magento/venia-ui/lib/components/MiniCart';
   import Navigation from '@magento/venia-ui/lib/components/Navigation';
   import Routes from '@magento/venia-ui/lib/components/Routes';
   import ToastContainer from '@magento/venia-ui/lib/components/ToastContainer';
