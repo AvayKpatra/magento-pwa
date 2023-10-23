@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Info } from 'react-feather';
 import { string, number, shape } from 'prop-types';
@@ -7,6 +7,7 @@ import Price from '@magento/venia-ui/lib/components/Price';
 import { UNCONSTRAINED_SIZE_KEY } from '@magento/peregrine/lib/talons/Image/useImage';
 import { useGalleryItem } from '@magento/peregrine/lib/talons/Gallery/useGalleryItem';
 import resourceUrl from '@magento/peregrine/lib/util/makeUrl';
+import axios from 'axios';
 
 // import { useStyle } from '../../classify';
 import { useStyle} from "@magento/venia-ui/lib/classify";
@@ -45,6 +46,7 @@ const IMAGE_WIDTHS = new Map()
     .set(UNCONSTRAINED_SIZE_KEY, 840);
 
 const GalleryItem = props => {
+   
     const {
         handleLinkClick,
         item,
@@ -53,6 +55,7 @@ const GalleryItem = props => {
         isSupportedProductType,
         // productDetails,
     } = useGalleryItem(props);
+    {console.log(isSupportedProductType)}
 
 // Adding products description
    
@@ -148,7 +151,7 @@ const GalleryItem = props => {
 
             {/* Adding short description */}
 
-            <p>{shortDescription}</p>
+         <p>Short Description</p>
             
           
 
@@ -198,7 +201,10 @@ GalleryItem.propTypes = {
                 }).isRequired
             }).isRequired
         }).isRequired
+       
     }),
+   
+
     storeConfig: shape({
         magento_wishlist_general_is_enabled: string.isRequired,
         product_url_suffix: string

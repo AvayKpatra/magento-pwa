@@ -20,9 +20,9 @@ import resourceUrl from '@magento/peregrine/lib/util/makeUrl';
 
 
 // import { mergeClasses } from '@magento/venia-ui/lib/classify';
-//  import defaultClasses from '../../node_modules/@magento/venia-ui/lib/components/Footer/footer.module.css';
+//  import defaultClasses from '@magento/venia-ui/lib/components/Footer/footer.module.css';
 
-import defaultClasses from "@magento/venia-ui/lib/components/Footer/footer.module.css"
+import defaultClasses from "./footer.module.css"
 
 import {DEFAULT_LINKS, LOREM_IPSUM } from "@magento/venia-ui/lib/components/Footer/sampleData"
 import { from } from 'form-data';
@@ -74,7 +74,9 @@ const Footer = props => {
 
     return (
         <footer data-cy="Footer-root" className={classes.root}>
-            <div className={classes.links}>
+        
+            <div className={classes.links} >
+
 
 
 
