@@ -5,7 +5,7 @@ module.exports = componentOverrideMapping = {
     [`${veniaUiPackagePath}/lib/components/ProductFullDetail/productFullDetail.js`]: 'src/components/ProductFullDetail/productFullDetail.js',
     [`${veniaUiPackagePath}/lib/components/Gallery/item.js`]: 'src/components/Gallery/item.js',
     [`${veniaUiPackagePath}/lib/components/SignIn/signIn.js`]: 'src/components/SignIn/signIn.js',
-
+    [`${veniaUiPackagePath}/lib/components/CartPage/cartPage.js`]: 'src/components/CartPage/cartPage.js',
     
     // add comma-separated files
 };
