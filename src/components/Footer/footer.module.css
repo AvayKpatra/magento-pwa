@@ -13,9 +13,13 @@
     composes: text-sm from global;
     composes: text-subtle from global;
     composes: w-full from global;
+
     /* display: flex; */
     
     
+}
+.root{
+    background-color: aquamarine;
 }
 
 .links {
@@ -35,6 +39,9 @@
   
     
 }
+.links{
+    display: flex;
+}
 
 .linkGroup {
     composes: col-span-3 from global;
@@ -53,6 +60,7 @@
     composes: first_font-semibold from global;
     color: rgb(46, 25, 234);
     cursor: pointer;
+    font-size: 20px;
     
 }
 

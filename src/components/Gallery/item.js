@@ -5,9 +5,11 @@ import { string, number, shape } from 'prop-types';
 import { Link } from 'react-router-dom';
 import Price from '@magento/venia-ui/lib/components/Price';
 import { UNCONSTRAINED_SIZE_KEY } from '@magento/peregrine/lib/talons/Image/useImage';
-import { useGalleryItem } from '@magento/peregrine/lib/talons/Gallery/useGalleryItem';
+import { useGalleryItem } from './useGalleryItem';
 import resourceUrl from '@magento/peregrine/lib/util/makeUrl';
 import axios from 'axios';
+import { GET_SHORT_DESCRIPTION } from '../S_Description/shortDescription';
+
 
 // import { useStyle } from '../../classify';
 import { useStyle} from "@magento/venia-ui/lib/classify";
@@ -46,6 +48,19 @@ const IMAGE_WIDTHS = new Map()
     .set(UNCONSTRAINED_SIZE_KEY, 840);
 
 const GalleryItem = props => {
+    const { loading, error, data } = useQuery(GET_SHORT_DESCRIPTION, {
+      
+        variables: {
+            cartId:String,
+        },
+    });
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error.message} </p>;
+
+  
+    const shortDescriptions = data.products.items.map(item = item.short_description.html);
+
+
    
     const {
         handleLinkClick,
@@ -53,6 +68,7 @@ const GalleryItem = props => {
         itemRef,
         wishlistButtonProps,
         isSupportedProductType,
+       
         // productDetails,
     } = useGalleryItem(props);
     {console.log(isSupportedProductType)}
@@ -149,9 +165,9 @@ const GalleryItem = props => {
              
             </div>
 
-            {/* Adding short description */}
+           
 
-         <p>Short Description</p>
+         <p> {shortDescriptions}</p>
             
           
 

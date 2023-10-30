@@ -8,7 +8,7 @@ import { useFooter } from '@magento/peregrine/lib/talons/Footer/useFooter';
 // import Logo from '../Logo';
 import Logo from '@magento/venia-ui/lib/components/Logo';
 // import Newsletter from '../Newsletter';
-import Newsletter from '@magento/venia-ui/lib/components/Newsletter';
+// import Newsletter from '@magento/venia-ui/lib/components/Newsletter';
 // import { useStyle } from '../../classify';
 
 
@@ -120,7 +120,7 @@ const Footer = props => {
                         </li>
                     </ul>
                 </div>
-                <Newsletter />
+
             </div>
             <div className={classes.branding}>
                 <ul className={classes.legal}>
