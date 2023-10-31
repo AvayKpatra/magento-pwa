@@ -12,7 +12,7 @@ import Logo from '@magento/venia-ui/lib/components/Logo';
 // import { useStyle } from '../../classify';
 
 
-import {mergeClasses,  useStyle} from "@magento/venia-ui/lib/classify"
+import { useStyle } from "@magento/venia-ui/lib/classify"
 
 // import defaultClasses from './footer.module.css';
 // import { DEFAULT_LINKS, LOREM_IPSUM } from './sampleData';
@@ -24,8 +24,8 @@ import resourceUrl from '@magento/peregrine/lib/util/makeUrl';
 
 import defaultClasses from "./footer.module.css"
 
-import {DEFAULT_LINKS, LOREM_IPSUM } from "@magento/venia-ui/lib/components/Footer/sampleData"
-import { from } from 'form-data';
+import { DEFAULT_LINKS } from "@magento/venia-ui/lib/components/Footer/sampleData"
+
 //  import GET_STORE_CONFIG_DATA from '@magento/venia-ui/lib/queries/getStoreConfigData.graphql';
 
 
@@ -37,6 +37,7 @@ const Footer = props => {
     const { copyrightText } = talonProps;
     const { formatMessage } = useIntl();
     const title = formatMessage({ id: 'logo.title', defaultMessage: 'Venia' });
+
 
     const linkGroups = Array.from(links, ([groupKey, linkProps]) => {
         const linkElements = Array.from(linkProps, ([text, pathInfo]) => {
@@ -74,19 +75,16 @@ const Footer = props => {
 
     return (
         <footer data-cy="Footer-root" className={classes.root}>
-        
+
             <div className={classes.links}  >
 
+                <div className={classes.link}>
+                    <Link to="/foo">
+                        <span className={classes.label}> Demo Page</span>
+                    </Link>
+                </div>
 
-
-
-<div className={classes.link}>
-         <Link to="/foo">
-           <span className={classes.label}> Demo Page</span>
-         </Link>
-       </div>
-
-              {linkGroups}
+                {linkGroups}
                 <div className={classes.callout}>
                     <span
                         data-cy="Footer-calloutHeading"
@@ -111,7 +109,7 @@ const Footer = props => {
                         <li>
                             <Instagram size={20} />
                         </li>
-                        
+
                         <li>
                             <Facebook size={20} />
                         </li>

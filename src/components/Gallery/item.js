@@ -8,7 +8,7 @@ import { UNCONSTRAINED_SIZE_KEY } from '@magento/peregrine/lib/talons/Image/useI
 import { useGalleryItem } from './useGalleryItem';
 import resourceUrl from '@magento/peregrine/lib/util/makeUrl';
 import axios from 'axios';
-import { GET_SHORT_DESCRIPTION } from '../S_Description/shortDescription';
+// import { GET_SHORT_DESCRIPTION } from '../S_Description/shortDescription';
 
 
 // import { useStyle } from '../../classify';
@@ -48,17 +48,17 @@ const IMAGE_WIDTHS = new Map()
     .set(UNCONSTRAINED_SIZE_KEY, 840);
 
 const GalleryItem = props => {
-    const { loading, error, data } = useQuery(GET_SHORT_DESCRIPTION, {
+    // const { loading, error, data } = useQuery(GET_SHORT_DESCRIPTION, {
       
-        variables: {
-            cartId:String,
-        },
-    });
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error: {error.message} </p>;
+    //     variables: {
+    //         cartId:String,
+    //     },
+    // });
+    // if (loading) return <p>Loading...</p>;
+    // if (error) return <p>Error: {error.message} </p>;
 
   
-    const shortDescriptions = data.products.items.map(item = item.short_description.html);
+    // const shortDescriptions = data.products.items.map(item = item.short_description.html);
 
 
    
@@ -167,7 +167,7 @@ const GalleryItem = props => {
 
            
 
-         <p> {shortDescriptions}</p>
+         <p> shortDescriptions</p>
             
           
 
