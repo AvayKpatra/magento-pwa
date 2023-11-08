@@ -163,7 +163,7 @@
 .loaderAfter {
     composes: left-[3.5em] from global;
     composes: text-gray-600 from global;
-}
+} 
 
 @keyframes pulse {
     0%,
