@@ -117,7 +117,8 @@
 }
 
 .input {
-    composes: input from '../TextInput/textInput.module.css';
+    /* composes: input from '../TextInput/textInput.module.css'; */
+    composes: input from '@magent/venia-ui';
 
     composes: max-w-sm from global;
 }
