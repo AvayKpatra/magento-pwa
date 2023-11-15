@@ -20,8 +20,8 @@ import resourceUrl from '@magento/peregrine/lib/util/makeUrl';
 // import { useStyle } from '../../classify';
 import { useStyle } from "@magento/venia-ui/lib/classify"
 // import defaultClasses from './header.module.css';
-import defaultClasses from "./header.module.css";
-// import defaultClasses from "@magento/venia-ui/lib/components/Header/header.module.css";
+// import defaultClasses from "./header.module.css";
+import defaultClasses from "@magento/venia-ui/lib/components/Header/header.module.css";
 // import StoreSwitcher from './storeSwitcher';
 import StoreSwitcher from "@magento/venia-ui/lib/components/Header/storeSwitcher";
 // import CurrencySwitcher from './currencySwitcher';
