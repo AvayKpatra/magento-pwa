@@ -12,7 +12,7 @@ import Logo from '@magento/venia-ui/lib/components/Logo';
 // import { useStyle } from '../../classify';
 
 
-import { useStyle } from "@magento/venia-ui/lib/classify"
+import { useStyle } from "@magento/venia-ui/lib/classify";
 
 // import defaultClasses from './footer.module.css';
 // import { DEFAULT_LINKS, LOREM_IPSUM } from './sampleData';
